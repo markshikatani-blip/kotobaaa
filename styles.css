@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 16px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #1a73e8;
+}
+
+header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.editor-section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#editor {
+  width: 100%;
+  height: 220px;
+  padding: 16px;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+#editor:focus {
+  border-color: #1a73e8;
+}
+
+.candidate-box {
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  background: #ffffff;
+  border: 1px solid #1a73e8;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  z-index: 10;
+}
+
+.candidate-box.hidden {
+  display: none;
+}
+
+.candidate-item {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #f0f4f9;
+}
+
+.candidate-item.selected {
+  background: #1a73e8;
+  color: #ffffff;
+}
+
+.action-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn {
+  background-color: #1a73e8;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background-color: #1557b0;
+}
+
+.secondary-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.secondary-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.status-msg {
+  font-size: 0.9rem;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.guide {
+  background-color: #f8f9fa;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border-left: 4px solid #1a73e8;
+}
+
+.guide h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.guide ul {
+  list-style-type: square;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.guide li {
+  margin-bottom: 6px;
+}
