@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotoba — 日本語入力支援ツール</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Kotoba</h1>
+      <p>米国配列キーボードでも、いつもの感覚で日本語入力・変換</p>
+    </header>
+
+    <main>
+      <div class="editor-section">
+        <textarea id="editor" placeholder="ここにローマ字で入力（例: konnichiwa -> Spaceで漢字変換）..." autofocus></textarea>
+        <div id="candidate-box" class="candidate-box hidden"></div>
+      </div>
+
+      <div class="action-bar">
+        <button id="copy-btn" class="primary-btn">文章をコピー</button>
+        <button id="clear-btn" class="secondary-btn">全消去</button>
+        <span id="status-msg" class="status-msg"></span>
+      </div>
+
+      <div class="guide">
+        <h3>使い方・ショートカット</h3>
+        <ul>
+          <li><strong>ローマ字入力:</strong> 米国配列キーボードのままで入力できます（<code>shi</code> / <code>si</code>、<code>chi</code> / <code>ti</code>、<code>tsu</code> / <code>tu</code> など対応）。</li>
+          <li><strong>漢字変換:</strong> <code>Space</code> キーで変換・候補選択。</li>
+          <li><strong>確定:</strong> <code>Enter</code> キーで文章を確定。</li>
+          <li><strong>安全設計:</strong> 入力された文章は外部サーバーへ送信・保存されません。学校の授業やエッセイ作成でも安心して利用できます。</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
